@@ -1,0 +1,48 @@
+{
+  "name": "football-stat",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "",
+  "author": "morsko1",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "concurrently": "^4.0.1",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-hot-loader": "^1.4.2",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "gh-pages": "^1.2.0",
+    "html-webpack-harddisk-plugin": "^1.0.1",
+    "html-webpack-plugin": "^4.0.0-alpha.2",
+    "node-sass": "^4.9.4",
+    "nodemon": "^1.18.4",
+    "react-scripts": "^1.0.17",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.8"
+  },
+  "dependencies": {
+    "connected-react-router": "^6.5.2",
+    "express": "^4.17.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-redux": "^7.1.1",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development --config webpack.dev.js --devtool inline-source-map --hot",
+    "client:dev": "webpack-dev-server --mode development --config webpack.dev.js --devtool inline-source-map --hot",
+    "client:prod": "webpack --mode production --config webpack.prod.js --progress",
+    "deploy": "npm run client:prod && gh-pages -d client/build"
+  }
+}
