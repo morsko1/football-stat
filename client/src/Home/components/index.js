@@ -7,12 +7,13 @@ import StandingsTableView from './parts/standingsTable';
 const HomeView = props => {
     return (
         <Layout>
-            <div>
-                <div>home page</div>
+            <div className="standings">
+                <div className="title">Standings</div>
                 {
                     props.availableOptions.countries.length ?
-                        <div>
-                            country:
+                        <div className="controls">
+                            <div className="controls__country">
+                            country: 
                             <select value={props.currentState.country} onChange={props.onCountryChange}>
                             {
                                 props.availableOptions.countries.map(item => {
@@ -20,7 +21,9 @@ const HomeView = props => {
                                 })
                             }
                             </select>
-                            season:
+                            </div>
+                            <div className="controls__season">
+                            season: 
                             <select value={props.currentState.season} onChange={props.onSeasonChange}>
                             {
                                 props.availableOptions.seasons.map(item => {
@@ -28,16 +31,17 @@ const HomeView = props => {
                                 })
                             }
                             </select>
+                            </div>
                         </div> :
                         null
                 }
 
                 {
                     !props.isStandingsLoading ?
-                    <div>
+                    <div className="standings__table-container">
                         <StandingsTableView standings={props.standings[props.currentState.standingsId]}/>
                     </div> :
-                    <div>loading...</div>
+                    <div className="loader"></div>
                 }
             </div>
         </Layout>

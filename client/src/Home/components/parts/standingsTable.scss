@@ -1,1 +1,28 @@
 @import 'common/styles/common';
+
+.standings-table {
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: unset;
+    th {
+        background-color: $color-lighter-grey;
+        color: $color-light-black;
+        padding: 0.2em 0.6em;
+        font-weight: normal;
+        font-size: 0.8em;
+    }
+    tbody td {
+        border-bottom: 1px solid $color-lighter-grey;
+        padding: 0.2em 0.6em;
+        text-align: center;
+    }
+    .left {
+        text-align: left;
+    }
+    .right {
+        text-align: right;
+    }
+    .bold {
+        font-weight: bold;
+    }
+}

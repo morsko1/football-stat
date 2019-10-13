@@ -3,8 +3,8 @@ import './style.scss';
 
 const HeaderView = props => {
     return (
-        <div>
-            header
+        <div className="header">
+            <div className="title">Football Stat</div>
         </div>
     );
 }

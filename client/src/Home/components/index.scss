@@ -1,1 +1,24 @@
 @import 'common/styles/common';
+
+.standings {
+    .title {
+        text-align: center;
+    }
+    .controls {
+        display: flex;
+        justify-content: center;
+        .controls__country,
+        .controls__season {
+            padding: 0.5em;
+        }
+        select {
+            margin-left: 0.5em;
+            padding: 0.2em;
+            border-radius: 0.2em;
+            outline: none;
+        }
+    }
+    .loader {
+        @include loader();
+    }
+}

@@ -1,2 +1,13 @@
 @import 'common/styles/common';
 
+.header {
+    width: 100%;
+    background: $color-background-main;
+    background: linear-gradient(90deg, $color-background-main 0%, $color-background-light 100%);
+    color: $color-white;
+    padding: 1em;
+    font-size: 1.2em;
+    .title {
+        text-align: center;
+    }
+}
