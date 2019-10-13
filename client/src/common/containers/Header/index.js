@@ -6,12 +6,15 @@ import HeaderView from './component.js';
 class Header extends Component {
     render() {
         return (
-            <HeaderView/>
+            <HeaderView
+                pathname={this.props.pathname}
+            />
         );
     }
 }
 
 const mapStateToProps = state => ({
+    pathname: state.router.location.pathname
 });
 
 const mapDispatchToProps = dispatch =>
