@@ -39,7 +39,10 @@ const HomeView = props => {
                 {
                     !props.isStandingsLoading ?
                     <div className="standings__table-container">
-                        <StandingsTableView standings={props.standings[props.currentState.standingsId]}/>
+                        <StandingsTableView
+                            standings={props.standings[props.currentState.standingsId]}
+                            currentState={props.currentState}
+                        />
                     </div> :
                     <div className="loader"></div>
                 }

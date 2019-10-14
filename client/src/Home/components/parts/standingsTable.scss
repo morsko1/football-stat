@@ -25,4 +25,9 @@
     .bold {
         font-weight: bold;
     }
+    .link {
+        color: $color-light-black;
+        font-weight: bold;
+        text-decoration: none;
+    }
 }

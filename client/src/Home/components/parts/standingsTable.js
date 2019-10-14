@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './standingsTable.scss';
 
 const StandingsTableView = props => {
@@ -25,7 +26,14 @@ const StandingsTableView = props => {
                     return (
                         <tr key={i}>
                             <td className="right">{i + 1}</td>
-                            <td className="left">{row.name}</td>
+                            <td className="left">
+                                <Link
+                                    className="link"
+                                    to={`games/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}?team=${row.name}`}
+                                >
+                                    {row.name}
+                                </Link>
+                            </td>
                             <td>{row.games}</td>
                             <td>{row.wins}</td>
                             <td>{row.draws}</td>
