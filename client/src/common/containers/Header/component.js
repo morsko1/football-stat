@@ -10,7 +10,7 @@ const HeaderView = props => {
                 <Link className={`link ${props.pathname === '/' ? 'active' : ''}`} to="/">Standings</Link>
                 <Link
                     className={`link ${props.pathname.indexOf('/games') != -1 ? 'active' : ''}`}
-                    to={`games/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}`}
+                    to={`/games/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}`}
                 >
                     Games
                 </Link>

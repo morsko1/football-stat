@@ -35,3 +35,11 @@
     text-decoration: underline;
     user-select: none;
 }
+
+@mixin title() {
+    text-align: center;
+    background: $color-background-main;
+    background: linear-gradient(90deg, $color-background-main 0%, $color-background-light 100%);
+    padding: 0.5em;
+    color: $color-white;
+}

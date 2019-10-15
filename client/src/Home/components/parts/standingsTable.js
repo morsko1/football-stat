@@ -29,7 +29,7 @@ const StandingsTableView = props => {
                             <td className="left">
                                 <Link
                                     className="link"
-                                    to={`games/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}?team=${row.name}`}
+                                    to={`/games/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}?team=${row.name}`}
                                 >
                                     {row.name}
                                 </Link>

@@ -1,8 +1,9 @@
 import * as actionsGames from '../actions';
 import * as util from '~/common/util';
 import {updateCurrentState} from '~/Home/actions';
+import {init as gameInit} from '~/Game/thunks';
 
-export const getGames = (params) => (dispatch, getState) => {
+export const getGames = (params, setGame) => (dispatch, getState) => {
     // reset games
     dispatch(actionsGames.getGamesSuccess([]));
 
@@ -20,6 +21,9 @@ export const getGames = (params) => (dispatch, getState) => {
     ).then(data =>{
         console.log(data);
         dispatch(actionsGames.getGamesSuccess(data.data));
+        if (setGame){
+            dispatch(gameInit(data.data[params.id]));
+        }
     }).catch(error => {
         console.log(error);
         dispatch(actionsGames.getGamesFailure(error));

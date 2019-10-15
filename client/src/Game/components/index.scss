@@ -1,6 +1,6 @@
 @import 'common/styles/common';
 
-.games {
+.game {
     width: 100%;
     .title {
         @include title();
@@ -8,12 +8,10 @@
     .loader {
         @include loader();
     }
-    .games-list {
+    .game-detail {
         max-width: 500px;
         margin-left: auto;
         margin-right: auto;
-    }
-    .game {
         padding: 0.5em;
         border-bottom: 1px solid $color-lighter-grey;
         text-align: center;
@@ -28,19 +26,19 @@
         font-weight: bold;
         text-decoration: none;
     }
-    .teams, .result {
+    .teams, .result, .result-half {
         display: flex;
         justify-content: space-between;
         color: $color-light-black;
         font-weight: bold;
         padding: 0.2em;
     }
-    .teams div, .result div {
+    .teams div, .result div, .result-half div {
         width: 50%;
         text-align: center;
     }
-    .more {
-        text-decoration: none;
-        color: $color-light-black;
+    .result-half {
+        font-size: 0.9em;
+        font-weight: normal;
     }
 }

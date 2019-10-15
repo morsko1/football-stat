@@ -36,7 +36,7 @@ const GamesView = props => {
                                             </div>
                                         </div>
                                         <div className="result"><div>{item.fullTimeHomeTeamGoals}</div><div>{item.fullTimeAwayTeamGoals}</div></div>
-                                        {/* <Link to="/" className="more">More...</Link> */}
+                                        <Link to={`/game/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}/${item.id}`} className="more">More...</Link>
                                     </div>
                                 );
                             })
