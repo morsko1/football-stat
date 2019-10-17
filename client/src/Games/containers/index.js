@@ -7,7 +7,7 @@ import * as thunkGames from '../thunks';
 class Games extends Component {
     componentDidMount() {
         console.log('Games did mount');
-        this.props.getGames(this.props.params);
+        this.props.init(this.props.params);
     }
 
     componentDidUpdate(prevProps) {
@@ -44,6 +44,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch =>
     bindActionCreators({
+        init: (params) => thunkGames.init(params),
         getGames: (params) => thunkGames.getGames(params)
     },
     dispatch

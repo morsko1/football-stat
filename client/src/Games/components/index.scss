@@ -8,12 +8,21 @@
     .loader {
         @include loader();
     }
+    .info {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+        text-align: center;
+        color: $color-light-black;
+        font-size: 1.2em;
+        padding: 1em;
+    }
     .games-list {
         max-width: 500px;
         margin-left: auto;
         margin-right: auto;
     }
-    .game {
+    .game-item {
         padding: 0.5em;
         border-bottom: 1px solid $color-lighter-grey;
         text-align: center;
