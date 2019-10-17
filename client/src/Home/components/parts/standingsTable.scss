@@ -30,4 +30,26 @@
         font-weight: bold;
         text-decoration: none;
     }
+    .form {
+        display: flex;
+        div {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            color: $color-white;
+            font-size: 0.6em;
+            font-weight: bold;
+            padding: 4px;
+            margin: 0 1px;
+        }
+        .win {
+            background-color: $color-win;
+        }
+        .draw {
+            background-color: $color-draw;
+        }
+        .lose {
+            background-color: $color-lose;
+        }
+    }
 }

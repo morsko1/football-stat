@@ -7,8 +7,7 @@ import * as thunkHome from '../thunks';
 class Home extends Component {
     componentDidMount() {
         console.log('Home did mount');
-        this.props.getChampionships();
-        this.props.getStandings();
+        this.props.init();
     }
 
     render() {
@@ -47,6 +46,7 @@ const mapDispatchToProps = dispatch =>
         onCountryChange: (e) => thunkHome.onCountryChange(e.target.value),
         onSeasonChange: (e) => thunkHome.onSeasonChange(e.target.value),
         onLeagueChange: (e) => thunkHome.onLeagueChange(e.target.value),
+        init: () => thunkHome.init(),
     },
     dispatch
 );

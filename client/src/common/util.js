@@ -21,3 +21,48 @@ export const getLeagueByCountry = (country) => {
     }
     return league;
 };
+
+export const getClassNameByGameResult = (gameResult) => {
+    let resultClass = '';
+    switch (gameResult.toUpperCase()) {
+        case 'W':
+            resultClass = 'win';
+            break;
+        case 'D':
+            resultClass = 'draw';
+            break;
+        case 'L':
+            resultClass = 'lose';
+            break;
+        default:
+            break;
+    }
+    return resultClass;
+};
+
+export const getLeagueNameById = (leagueId) => {
+    let resultName = '';
+    switch (leagueId.toUpperCase()) {
+        case 'E0':
+            resultName = 'England Premier League';
+            break;
+        case 'D1':
+            resultName = 'Germany Bundesliga';
+            break;
+        case 'I1':
+            resultName = 'Italy Serie A';
+            break;
+        case 'SP1':
+            resultName = 'Spain Primera';
+            break;
+        case 'F1':
+            resultName = 'France League One';
+            break;
+        default:
+            break;
+    }
+    return resultName;
+};
+export const getSeasonBySeasonId = (seasonId) => {
+    return `20${seasonId.slice(0, 2)}/20${seasonId.slice(2)}`
+};

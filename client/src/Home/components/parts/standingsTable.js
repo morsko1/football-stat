@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './standingsTable.scss';
 
+import * as util from '~/common/util';
+
 const StandingsTableView = props => {
     return (
         <table className="standings-table">
@@ -17,7 +19,7 @@ const StandingsTableView = props => {
                     <th>Allowed</th>
                     <th>+/-</th>
                     <th>Points</th>
-                    {/* <th>Form</th> */}
+                    <th>Form</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,7 +44,11 @@ const StandingsTableView = props => {
                             <td>{row.goalsTotalAllowed}</td>
                             <td>{row.goalsTotal - row.goalsTotalAllowed}</td>
                             <td className="bold">{row.pointsTotal}</td>
-                            {/* <td>form</td> */}
+                            <td>
+                                <div className="form">
+                                    {row.form.slice(-5).map((item, i) => <div key={i} className={util.getClassNameByGameResult(item)}>{item}</div>)}
+                                </div>
+                            </td>
                         </tr>
                     );
                 })
