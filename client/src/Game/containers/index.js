@@ -14,8 +14,8 @@ class Game extends Component {
         return (
             <GameView
                 currentState={this.props.currentState}
-                isGamesLoading={this.props.isGamesLoading}
-                gamesLoadingError={this.props.gamesLoadingError}
+                isGameLoading={this.props.isGameLoading}
+                gameLoadingError={this.props.gameLoadingError}
                 game={this.props.game}
             />
         );
@@ -26,8 +26,8 @@ const mapStateToProps = (state, ownProps) => {
     return ({
         currentState: state.home.currentState,
         game: state.game.game,
-        isGamesLoading: state.games.isGamesLoading,
-        gamesLoadingError: state.games.gamesLoadingError,
+        isGameLoading: state.game.isGameLoading,
+        gameLoadingError: state.game.gameLoadingError,
         params: ownProps.match.params,
     })
 };

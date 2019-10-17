@@ -9,12 +9,19 @@
         @include loader();
     }
     .game-detail {
-        max-width: 500px;
+        max-width: 600px;
         margin-left: auto;
         margin-right: auto;
-        padding: 0.5em;
-        border-bottom: 1px solid $color-lighter-grey;
         text-align: center;
+        .info {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 500px;
+            text-align: center;
+            color: $color-light-black;
+            font-size: 1.2em;
+            padding: 1em;
+        }
     }
     .date {
         font-size: 0.8em;
@@ -26,19 +33,47 @@
         font-weight: bold;
         text-decoration: none;
     }
-    .teams, .result, .result-half {
+    .teams,
+    .result,
+    .result-half {
         display: flex;
         justify-content: space-between;
-        color: $color-light-black;
         font-weight: bold;
-        padding: 0.2em;
+        font-size: 1.2em;
     }
-    .teams div, .result div, .result-half div {
-        width: 50%;
+    .teams .team,
+    .result .team,
+    .result-half .team {
+        width: 35%;
         text-align: center;
     }
+    .teams .middle,
+    .result .middle,
+    .result-half .middle {
+        width: 30%;
+    }
     .result-half {
-        font-size: 0.9em;
+        font-size: 1em;
         font-weight: normal;
+    }
+    .stat {
+        padding-top: 1em;
+    }
+    .stat-line {
+        display: flex;
+        justify-content: center;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid $color-lighter-grey;
+    }
+    .stat-line .team {
+        width: 35%;
+        text-align: center;
+    }
+    .stat-line .middle {
+        width: 30%;
+        text-align: center;
+        font-size: 0.8em;
+        color: $color-light-black;
     }
 }
