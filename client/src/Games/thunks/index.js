@@ -25,7 +25,7 @@ export const getGames = (params) => (dispatch, getState) => {
     dispatch(actionsGames.getGames());
     let state = getState();
     let currentState = state.home.currentState;
-    const team = state.router.location.search.slice(state.router.location.search.indexOf('?team=') + 6);
+    const team = decodeURI(state.router.location.search.slice(state.router.location.search.indexOf('?team=') + 6));
     if (team) {
         dispatch(updateCurrentState({...params, team}));
     } else {
