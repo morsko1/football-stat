@@ -27,7 +27,7 @@ const GamesView = props => {
                                             <div>
                                                 <Link
                                                     className="link"
-                                                    to={`${props.pathname}?team=${item.homeTeam}`}
+                                                    to={`/team/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}/${item.homeTeam}`}
                                                 >
                                                     {item.homeTeam}
                                                 </Link>
@@ -35,7 +35,7 @@ const GamesView = props => {
                                             <div>
                                                 <Link
                                                     className="link"
-                                                    to={`${props.pathname}?team=${item.awayTeam}`}
+                                                    to={`/team/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}/${item.awayTeam}`}
                                                 >
                                                     {item.awayTeam}
                                                 </Link>

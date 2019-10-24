@@ -1,0 +1,81 @@
+@import 'common/styles/common';
+
+.team {
+    width: 100%;
+    .title {
+        @include title();
+    }
+    .loader {
+        @include loader();
+    }
+    .info {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+        text-align: center;
+        color: $color-light-black;
+        font-size: 1.2em;
+        padding: 1em;
+    }
+    .tabs {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 4px;
+        .tab {
+            color: $color-light-black;
+            text-decoration: none;
+            padding: 0.2em 0.5em;
+            border-bottom: 4px solid transparent;
+            cursor: pointer;
+        }
+        .tab:hover {
+            border-bottom: 4px solid $color-background-main;
+        }
+        .tab.active {
+            border-bottom: 4px solid $color-background-main;
+            font-weight: bold;
+        }
+    }
+    .games-list {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .game-item {
+        padding: 0.5em;
+        border-bottom: 1px solid $color-lighter-grey;
+        text-align: center;
+    }
+    .date {
+        font-size: 0.8em;
+        text-align: center;
+        color: $color-light-black;
+    }
+    .link {
+        color: $color-light-black;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .teams, .result {
+        display: flex;
+        justify-content: space-between;
+        color: $color-light-black;
+        font-weight: bold;
+        padding: 0.2em;
+    }
+    .teams div, .result div {
+        width: 50%;
+        text-align: center;
+    }
+    .more {
+        text-decoration: none;
+        color: $color-light-black;
+    }
+
+    .summary {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
