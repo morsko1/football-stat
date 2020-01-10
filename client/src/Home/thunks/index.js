@@ -1,5 +1,6 @@
 import * as actionsHome from '../actions';
 import * as util from '~/common/util';
+import {baseUrl} from '~/common/urls';
 
 export const init = () => (dispatch, getState) => {
     const state = getState();
@@ -25,7 +26,7 @@ export const init = () => (dispatch, getState) => {
 
 
 export const getChampionships = () => (dispatch) => {
-    fetch(`/api/v1/championships`).then(
+    fetch(`${baseUrl}/api/v1/championships`).then(
         response => response.json()
     ).then(data =>{
         console.log(data);
@@ -65,7 +66,7 @@ export const getStandings = () => (dispatch, getState) => {
     }
     dispatch(actionsHome.getStandings());
     const currentState = state.home.currentState;
-    fetch(`/api/v1/seasons/${currentState.season}/countries/${currentState.country}/leagues/${currentState.league}/standings`).then(
+    fetch(`${baseUrl}/api/v1/seasons/${currentState.season}/countries/${currentState.country}/leagues/${currentState.league}/standings`).then(
         response => response.json()
     ).then(data =>{
         console.log('data = ', data);

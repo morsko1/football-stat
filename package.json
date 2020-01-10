@@ -43,6 +43,7 @@
     "start": "webpack-dev-server --mode development --config webpack.dev.js --devtool inline-source-map --hot",
     "client:dev": "webpack-dev-server --mode development --config webpack.dev.js --devtool inline-source-map --hot",
     "client:prod": "webpack --mode production --config webpack.prod.js --progress",
+    "client:prod_u": "NODE_ENV=production webpack --mode production --config webpack.prod.js --progress",
     "deploy": "npm run client:prod && gh-pages -d client/build"
   }
 }
