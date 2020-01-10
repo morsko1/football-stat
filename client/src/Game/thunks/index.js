@@ -1,5 +1,6 @@
 import * as actionsGame from '../actions';
 import * as util from '~/common/util';
+import {baseUrl} from '~/common/urls';
 import {updateCurrentState} from '~/Home/actions';
 
 export const init = (params) => (dispatch, getState) => {
@@ -23,7 +24,7 @@ export const getGame = (params) => (dispatch, getState) => {
         currentState = state.home.currentState;
     }
     dispatch(actionsGame.getGame());
-    fetch(`/api/v1/seasons/${currentState.season}/countries/${currentState.country}/leagues/${currentState.league}/games/${params.id}`).then(
+    fetch(`${baseUrl}/api/v1/seasons/${currentState.season}/countries/${currentState.country}/leagues/${currentState.league}/games/${params.id}`).then(
         response => response.json()
     ).then(data =>{
         console.log(data);
