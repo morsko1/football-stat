@@ -17,3 +17,5 @@ yarn.lock
 yarn-error.log
 .idea/
 .vscode/
+
+config.js
