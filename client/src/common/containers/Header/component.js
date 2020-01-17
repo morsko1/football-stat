@@ -5,7 +5,9 @@ import {Link} from 'react-router-dom';
 const HeaderView = props => {
     return (
         <div className="header">
-            <div className="title">Football Stat</div>
+            <div className="title">
+                <Link className="link" to="/">Football Stat</Link>
+            </div>
             <div className="navigation">
                 <Link className={`link ${props.pathname === '/' ? 'active' : ''}`} to="/">Standings</Link>
                 <Link

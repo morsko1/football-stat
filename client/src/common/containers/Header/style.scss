@@ -8,6 +8,10 @@
         color: $color-white;
         padding: 1em;
         text-align: center;
+        .link {
+            color: $color-white;
+            text-decoration: none;
+        }
     }
     .navigation {
         background-color: $color-white;
