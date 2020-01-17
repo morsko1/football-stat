@@ -27,6 +27,7 @@ class Team extends Component {
                 gamesLoadingError={this.props.gamesLoadingError}
                 pathname={this.props.pathname}
                 sortBy={this.props.sortBy}
+                summary={this.props.summary}
 
                 changeActiveTab={this.props.changeActiveTab}
                 sort={this.props.sort}
@@ -45,6 +46,7 @@ const mapStateToProps = (state, ownProps) => {
         params: ownProps.match.params,
         pathname: ownProps.location.pathname,
         sortBy: state.team.sortBy,
+        summary: state.team.summary,
     })
 };
 

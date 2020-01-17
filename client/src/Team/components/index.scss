@@ -16,6 +16,9 @@
         color: $color-light-black;
         font-size: 1.2em;
         padding: 1em;
+        .team-name {
+            font-weight: bold;;
+        }
     }
     .tabs {
         display: flex;
@@ -82,5 +85,52 @@
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+        .topic-games {
+            margin-top: 1em;
+        }
+
+        .line-diagram {
+            display: flex;
+            margin-bottom: 0.5em;
+            color: $color-white;
+        }
+        .line-diagram .wins {
+            background-color: $color-win;
+            text-align: center;
+            padding-top: 0.2em;
+            padding-bottom: 0.2em;
+        }
+        .line-diagram .draws {
+            background-color: $color-draw;
+            text-align: center;
+            padding-top: 0.2em;
+            padding-bottom: 0.2em;
+        }
+        .line-diagram .losses {
+            background-color: $color-lose;
+            text-align: center;
+            padding-top: 0.2em;
+            padding-bottom: 0.2em;
+        }
+
+        .line-diagram-splitted {
+            display: flex;
+            justify-content: space-between;
+            background-color: $color-white;
+        }
+        .line-diagram-splitted .goals-scored {
+            color: $color-white;
+            background-color: $color-win;
+            text-align: center;
+            padding-top: 0.2em;
+            padding-bottom: 0.2em;
+        }
+        .line-diagram-splitted .goals-allowed {
+            color: $color-white;
+            background-color: $color-lose;
+            text-align: center;
+            padding-top: 0.2em;
+            padding-bottom: 0.2em;
+        }
     }
 }

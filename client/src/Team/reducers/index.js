@@ -5,6 +5,7 @@ const initialState = {
     isGamesLoading: false,
     gamesLoadingError: null, 
     games: [],
+    summary: null,
     sortBy: 'asc'
 };
 
@@ -20,7 +21,8 @@ export default (state = initialState, action) => {
         case actionsTeam.GET_GAMES_SUCCESS:
             return {
                 ...state,
-                games: action.payload.data,
+                games: action.payload.games,
+                summary: action.payload.summary,
                 isGamesLoading: false
             };
 
