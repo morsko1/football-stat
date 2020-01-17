@@ -1,6 +1,7 @@
 export const GET_GAMES = 'games/GET_GAMES';
 export const GET_GAMES_SUCCESS = 'games/GET_GAMES_SUCCESS';
 export const GET_GAMES_FAILURE = 'games/GET_GAMES_FAILURE';
+export const SORT = 'games/SORT';
 
 export const getGames = () => ({
     type: GET_GAMES
@@ -18,4 +19,8 @@ export const getGamesFailure = (error) => ({
     payload: {
         error
     }
+});
+
+export const sort = () => ({
+    type: SORT
 });

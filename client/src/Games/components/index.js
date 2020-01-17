@@ -17,6 +17,9 @@ const GamesView = props => {
                         <div>{util.getLeagueNameById(props.currentState.league)} {util.getSeasonBySeasonId(props.currentState.season)}</div>
                         {props.currentState.team && <div>{props.currentState.team}</div>}
                     </div>
+                    <div className="sort">
+                        <button onClick={props.sort}>{props.sortBy === 'asc' ? 'new first' : 'old first'}</button>
+                    </div>
                     <div className="games-list">
                         {
                             props.games.map((item) => {

@@ -4,7 +4,8 @@ const initialState = {
     activeTab: 'games',
     isGamesLoading: false,
     gamesLoadingError: null, 
-    games: []
+    games: [],
+    sortBy: 'asc'
 };
 
 export default (state = initialState, action) => {
@@ -12,7 +13,8 @@ export default (state = initialState, action) => {
         case actionsTeam.GET_GAMES:
             return {
                 ...state,
-                isGamesLoading: true
+                isGamesLoading: true,
+                sortBy: 'asc'
             };
 
         case actionsTeam.GET_GAMES_SUCCESS:
@@ -34,6 +36,14 @@ export default (state = initialState, action) => {
                 ...state,
                 activeTab: action.payload.tab
             };
+
+        case actionsTeam.SORT:
+            return {
+                ...state,
+                sortBy: state.sortBy === 'asc' ? 'desc' : 'asc',
+                games: state.games.slice().reverse()
+            };
+    
 
         default:
             return state;

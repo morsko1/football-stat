@@ -26,8 +26,10 @@ class Team extends Component {
                 isGamesLoading={this.props.isGamesLoading}
                 gamesLoadingError={this.props.gamesLoadingError}
                 pathname={this.props.pathname}
+                sortBy={this.props.sortBy}
 
                 changeActiveTab={this.props.changeActiveTab}
+                sort={this.props.sort}
             />
         );
     }
@@ -42,6 +44,7 @@ const mapStateToProps = (state, ownProps) => {
         gamesLoadingError: state.team.gamesLoadingError,
         params: ownProps.match.params,
         pathname: ownProps.location.pathname,
+        sortBy: state.team.sortBy,
     })
 };
 
@@ -49,7 +52,8 @@ const mapDispatchToProps = dispatch =>
     bindActionCreators({
         init: (params) => thunkTeam.init(params),
         getGames: (params) => thunkTeam.getGames(params),
-        changeActiveTab: (tab) => actionsTeam.changeActiveTab(tab)
+        changeActiveTab: (tab) => actionsTeam.changeActiveTab(tab),
+        sort: () => actionsTeam.sort()
     },
     dispatch
 );

@@ -3,6 +3,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import GamesView from '../components';
 import * as thunkGames from '../thunks';
+import * as actionsGames from '../actions';
 
 class Games extends Component {
     componentDidMount() {
@@ -25,6 +26,9 @@ class Games extends Component {
                 gamesLoadingError={this.props.gamesLoadingError}
                 pathname={this.props.pathname}
                 search={this.props.search}
+                sortBy={this.props.sortBy}
+
+                sort={this.props.sort}
             />
         );
     }
@@ -39,13 +43,15 @@ const mapStateToProps = (state, ownProps) => {
         params: ownProps.match.params,
         pathname: ownProps.location.pathname,
         search: ownProps.location.search,
+        sortBy: state.games.sortBy,
     })
 };
 
 const mapDispatchToProps = dispatch =>
     bindActionCreators({
         init: (params) => thunkGames.init(params),
-        getGames: (params) => thunkGames.getGames(params)
+        getGames: (params) => thunkGames.getGames(params),
+        sort: () => actionsGames.sort()
     },
     dispatch
 );

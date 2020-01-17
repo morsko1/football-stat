@@ -17,6 +17,10 @@
         font-size: 1.2em;
         padding: 1em;
     }
+    .sort {
+        display: flex;
+        justify-content: center;
+    }
     .games-list {
         max-width: 500px;
         margin-left: auto;

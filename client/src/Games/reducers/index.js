@@ -3,7 +3,8 @@ import * as actionsGames from '../actions';
 const initialState = {
     isGamesLoading: false,
     gamesLoadingError: null, 
-    games: []
+    games: [],
+    sortBy: 'asc'
 };
 
 export default (state = initialState, action) => {
@@ -26,6 +27,13 @@ export default (state = initialState, action) => {
                 ...state,
                 isGamesLoading: false,
                 gamesLoadingError: action.payload.error
+            };
+
+        case actionsGames.SORT:
+            return {
+                ...state,
+                sortBy: state.sortBy === 'asc' ? 'desc' : 'asc',
+                games: state.games.slice().reverse()
             };
 
         default:

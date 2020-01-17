@@ -50,11 +50,21 @@ const TeamView = props => {
     const getTabContent = () => {
         switch(props.activeTab) {
             case 'games':
-                return getGamesList(props);
+                return (<div>
+                    <div className="sort">
+                        <button onClick={props.sort}>{props.sortBy === 'asc' ? 'new first' : 'old first'}</button>
+                    </div>
+                    {getGamesList(props)}
+                </div>);
             case 'summary':
                 return getSummary(props);
             default:
-                return getGamesList(props);
+                return (<div>
+                    <div className="sort">
+                        <button onClick={props.sort}>{props.sortBy === 'asc' ? 'new first' : 'old first'}</button>
+                    </div>
+                    {getGamesList(props)}
+                </div>);
         }
     };
     return (
