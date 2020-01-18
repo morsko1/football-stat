@@ -46,13 +46,13 @@ const getSummary = (props) => {
     const drawsWidth = (summary.draws / summary.games) * 100;
     const lossesWidth = (summary.losses / summary.games) * 100;
 
-    const winsHomeWidth = (summary.winsHome / (summary.games/2)) * 100;
-    const drawsHomeWidth = (summary.drawsHome / (summary.games/2)) * 100;
-    const lossesHomeWidth = (summary.lossesHome / (summary.games/2)) * 100;
+    const winsHomeWidth = (summary.winsHome / (summary.gamesHome)) * 100;
+    const drawsHomeWidth = (summary.drawsHome / (summary.gamesHome)) * 100;
+    const lossesHomeWidth = (summary.lossesHome / (summary.gamesHome)) * 100;
 
-    const winsAwayWidth = (summary.winsAway / (summary.games/2)) * 100;
-    const drawsAwayWidth = (summary.drawsAway / (summary.games/2)) * 100;
-    const lossesAwayWidth = (summary.lossesAway / (summary.games/2)) * 100;
+    const winsAwayWidth = (summary.winsAway / (summary.gamesAway)) * 100;
+    const drawsAwayWidth = (summary.drawsAway / (summary.gamesAway)) * 100;
+    const lossesAwayWidth = (summary.lossesAway / (summary.gamesAway)) * 100;
 
     const goalsScoredWidth = (summary.goalsTotal / (summary.goalsTotal + summary.goalsTotalAllowed)) * 100;
     const goalsAllowedWidth = (summary.goalsTotalAllowed / (summary.goalsTotal + summary.goalsTotalAllowed)) * 100;
