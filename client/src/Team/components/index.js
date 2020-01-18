@@ -5,12 +5,25 @@ import Layout from '~/common/components/Layout/Layout.js';
 import * as util from '~/common/util';
 
 const getGamesList = (props) => {
+    let team = props.summary && props.summary.name;
     return (
         <div className="games-list">
             {
                 props.games.map((item) => {
+                    let gameResult;
+                    switch (item.fullTimeResult) {
+                        case 'H':
+                            gameResult = item.homeTeam === team ? 'win' : 'lose';
+                            break;
+                        case 'A':
+                            gameResult = item.homeTeam === team ? 'lose' : 'win';
+                            break;
+                        default:
+                            gameResult = 'draw';
+                            break;
+                    }
                     return (
-                        <div key={item.id} className="game-item">
+                        <div key={item.id} className={`game-item ${gameResult}`}>
                             <div className="date">{item.date}</div>
                             <div className="teams">
                                 <div>

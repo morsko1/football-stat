@@ -13,7 +13,7 @@
         margin-right: auto;
         max-width: 500px;
         text-align: center;
-        color: $color-light-black;
+        color: $color-font;
         font-size: 1.2em;
         padding: 1em;
         .team-name {
@@ -25,7 +25,7 @@
         justify-content: center;
         padding-bottom: 4px;
         .tab {
-            color: $color-light-black;
+            color: $color-font;
             text-decoration: none;
             padding: 0.2em 0.5em;
             border-bottom: 4px solid transparent;
@@ -53,21 +53,32 @@
         padding: 0.5em;
         border-bottom: 1px solid $color-lighter-grey;
         text-align: center;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+    .game-item.win {
+        background-color: rgba($color-win, 0.15);
+    }
+    .game-item.lose {
+        background-color: rgba($color-lose, 0.15);
+    }
+    .game-item.draw {
+        background-color: rgba($color-draw, 0.15);
     }
     .date {
         font-size: 0.8em;
         text-align: center;
-        color: $color-light-black;
+        color: $color-font;
     }
     .link {
-        color: $color-light-black;
+        color: $color-font;
         font-weight: bold;
         text-decoration: none;
     }
     .teams, .result {
         display: flex;
         justify-content: space-between;
-        color: $color-light-black;
+        color: $color-font;
         font-weight: bold;
         padding: 0.2em;
     }
@@ -77,7 +88,7 @@
     }
     .more {
         text-decoration: none;
-        color: $color-light-black;
+        color: $color-font;
     }
 
     .summary {
@@ -95,19 +106,19 @@
             color: $color-white;
         }
         .line-diagram .wins {
-            background-color: $color-win;
+            background-color: rgba($color-win, 0.8);
             text-align: center;
             padding-top: 0.2em;
             padding-bottom: 0.2em;
         }
         .line-diagram .draws {
-            background-color: $color-draw;
+            background-color: rgba($color-draw, 0.8);
             text-align: center;
             padding-top: 0.2em;
             padding-bottom: 0.2em;
         }
         .line-diagram .losses {
-            background-color: $color-lose;
+            background-color: rgba($color-lose, 0.8);
             text-align: center;
             padding-top: 0.2em;
             padding-bottom: 0.2em;
@@ -116,18 +127,18 @@
         .line-diagram-splitted {
             display: flex;
             justify-content: space-between;
-            background-color: $color-light-grey;
+            background-color: rgba($color-light-grey, 0.8);
         }
         .line-diagram-splitted .goals-scored {
             color: $color-white;
-            background-color: $color-win;
+            background-color: rgba($color-win, 0.8);
             text-align: center;
             padding-top: 0.2em;
             padding-bottom: 0.2em;
         }
         .line-diagram-splitted .goals-allowed {
             color: $color-white;
-            background-color: $color-lose;
+            background-color: rgba($color-lose, 0.8);
             text-align: center;
             padding-top: 0.2em;
             padding-bottom: 0.2em;
