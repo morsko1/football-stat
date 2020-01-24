@@ -96,7 +96,10 @@ const getSummary = (props) => {
 
     return (
         <div className="summary">
-            <div className="topic-games">Games: {summary.games}</div>
+            <div className="topic">Games:</div>
+            <div className="line-diagram">
+                <div className="draws" style={{width: '100%'}}>{summary.games || ''}</div>
+            </div>
             <br/>
             <div className="topic">Full-time results:</div>
             <div className="line-diagram">
@@ -141,6 +144,7 @@ const getSummary = (props) => {
             <div className="topic">Shots on target:</div>
             <div className="line-diagram-splitted">
                 <div className="goals-scored" style={{width: shotsOnTargetWidth + '%'}}>{summary.shotsOnTarget || ''}</div>
+                <div className="goals-empty" style={{width: (100 - shotsOnTargetWidth - shotsOnTargetAllowedWidth) + '%'}}>{summary.shotsOnTarget || ''}</div>
                 <div className="goals-allowed" style={{width: shotsOnTargetAllowedWidth + '%'}}>{summary.shotsOnTargetAllowed || ''}</div>
             </div>
             <br/>
@@ -192,7 +196,7 @@ const TeamView = props => {
     return (
         <Layout>
             <div className="team">
-                <div className="title">Team</div>
+                <div className="title">{props.summary && props.summary.name || 'Team'}</div>
                 <div>
                 {
                     !props.isGamesLoading ?

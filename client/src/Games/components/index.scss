@@ -13,7 +13,7 @@
         margin-right: auto;
         max-width: 500px;
         text-align: center;
-        color: $color-light-black;
+        color: $color-font;
         font-size: 1.2em;
         padding: 1em;
     }
@@ -34,17 +34,17 @@
     .date {
         font-size: 0.8em;
         text-align: center;
-        color: $color-light-black;
+        color: $color-font;
     }
     .link {
-        color: $color-light-black;
+        color: $color-font;
         font-weight: bold;
         text-decoration: none;
     }
     .teams, .result {
         display: flex;
         justify-content: space-between;
-        color: $color-light-black;
+        color: $color-font;
         font-weight: bold;
         padding: 0.2em;
     }
@@ -54,6 +54,6 @@
     }
     .more {
         text-decoration: none;
-        color: $color-light-black;
+        color: $color-font;
     }
 }

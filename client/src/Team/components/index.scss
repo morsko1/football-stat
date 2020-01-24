@@ -99,49 +99,58 @@
         .topic-games {
             margin-top: 1em;
         }
+        .topic {
+            text-align: left;
+            padding-left: 0.5em;
+        }
 
         .line-diagram {
             display: flex;
-            margin-bottom: 0.5em;
-            color: $color-white;
+            margin-bottom: 1.5em;
+            font-weight: bold;
         }
         .line-diagram .wins {
-            background-color: rgba($color-win, 0.8);
             text-align: center;
             padding-top: 0.2em;
             padding-bottom: 0.2em;
+            border-bottom: 10px solid rgba($color-win, 0.8);
         }
         .line-diagram .draws {
-            background-color: rgba($color-draw, 0.8);
             text-align: center;
             padding-top: 0.2em;
             padding-bottom: 0.2em;
+            border-bottom: 10px solid rgba($color-draw, 0.8);
         }
         .line-diagram .losses {
-            background-color: rgba($color-lose, 0.8);
             text-align: center;
             padding-top: 0.2em;
             padding-bottom: 0.2em;
+            border-bottom: 10px solid rgba($color-lose, 0.8);
         }
 
         .line-diagram-splitted {
             display: flex;
             justify-content: space-between;
-            background-color: rgba($color-light-grey, 0.8);
+            font-weight: bold;
         }
         .line-diagram-splitted .goals-scored {
-            color: $color-white;
-            background-color: rgba($color-win, 0.8);
             text-align: center;
             padding-top: 0.2em;
             padding-bottom: 0.2em;
+            border-bottom: 10px solid rgba($color-win, 0.8);
+            
         }
         .line-diagram-splitted .goals-allowed {
-            color: $color-white;
-            background-color: rgba($color-lose, 0.8);
             text-align: center;
             padding-top: 0.2em;
             padding-bottom: 0.2em;
+            border-bottom: 10px solid rgba($color-lose, 0.8);
+        }
+        .line-diagram-splitted .goals-empty {
+            text-align: center;
+            padding-top: 0.2em;
+            padding-bottom: 0.2em;
+            border-bottom: 10px solid rgba($color-draw, 0.8);
         }
     }
 }

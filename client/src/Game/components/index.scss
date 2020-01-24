@@ -18,18 +18,17 @@
             margin-right: auto;
             max-width: 500px;
             text-align: center;
-            color: $color-light-black;
+            color: $color-font;
             font-size: 1.2em;
             padding: 1em;
         }
     }
     .date {
-        font-size: 0.8em;
         text-align: center;
-        color: $color-light-black;
+        color: $color-font;
     }
     .link {
-        color: $color-light-black;
+        color: $color-font;
         font-weight: bold;
         text-decoration: none;
     }
@@ -73,7 +72,7 @@
     .stat-line .middle {
         width: 30%;
         text-align: center;
-        font-size: 0.8em;
-        color: $color-light-black;
+        font-size: 1em;
+        color: $color-font;
     }
 }

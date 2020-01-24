@@ -6,14 +6,13 @@
     border-spacing: unset;
     th {
         background-color: $color-lighter-grey;
-        color: $color-light-black;
-        padding: 0.2em 0.6em;
+        color: $color-font;
+        padding: 0.3em 0.6em;
         font-weight: normal;
-        font-size: 0.8em;
     }
     tbody td {
         border-bottom: 1px solid $color-lighter-grey;
-        padding: 0.2em 0.6em;
+        padding: 0.3em 0.6em;
         text-align: center;
     }
     .left {
@@ -26,7 +25,7 @@
         font-weight: bold;
     }
     .link {
-        color: $color-light-black;
+        color: $color-font;
         font-weight: bold;
         text-decoration: none;
     }

@@ -4,7 +4,7 @@ const initialState = {
     isGamesLoading: false,
     gamesLoadingError: null, 
     games: [],
-    sortBy: 'asc'
+    sortBy: 'desc'
 };
 
 export default (state = initialState, action) => {
@@ -18,7 +18,7 @@ export default (state = initialState, action) => {
         case actionsGames.GET_GAMES_SUCCESS:
             return {
                 ...state,
-                games: action.payload.data,
+                games: action.payload.data.slice().reverse(),
                 isGamesLoading: false
             };
 

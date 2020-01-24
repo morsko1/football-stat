@@ -3,7 +3,8 @@
 .header {
     width: 100%;
     background: $color-background-main;
-    background: linear-gradient(90deg, $color-background-main 0%, $color-background-light 100%);
+    // background: linear-gradient(90deg, $color-background-main 60%, $color-background-light 100%);
+    // background: radial-gradient(circle, $color-background-main 60%, $color-background-light 100%);
     .title {
         color: $color-white;
         padding: 1em;
@@ -18,9 +19,8 @@
         display: flex;
         justify-content: center;
         padding-bottom: 4px;
-        font-size: 0.8em;
         .link {
-            color: $color-light-black;
+            color: $color-font;
             text-decoration: none;
             padding: 0.2em 0.5em;
             border-bottom: 4px solid transparent;
