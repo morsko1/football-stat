@@ -96,12 +96,17 @@
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-        .topic-games {
-            margin-top: 1em;
+        .row {
+            position: relative;
         }
         .topic {
-            text-align: left;
+            text-align: right;
             padding-left: 0.5em;
+            padding-top: 19px;
+            padding-right: 10px;
+            position: absolute;
+            left: -110px;
+            width: 22%;
         }
 
         .line-diagram {

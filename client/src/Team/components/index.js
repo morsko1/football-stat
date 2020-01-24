@@ -96,77 +96,103 @@ const getSummary = (props) => {
 
     return (
         <div className="summary">
-            <div className="topic">Games:</div>
-            <div className="line-diagram">
-                <div className="draws" style={{width: '100%'}}>{summary.games || ''}</div>
+            <div className="row">
+                <div className="topic">Games</div>
+                <div className="line-diagram">
+                    <div className="draws" style={{width: '100%'}}>{summary.games || ''}</div>
+                </div>
             </div>
             <br/>
-            <div className="topic">Full-time results:</div>
-            <div className="line-diagram">
-                <div className="wins" style={{width: winsWidth + '%'}}>{summary.wins || ''}</div>
-                <div className="draws" style={{width: drawsWidth + '%'}}>{summary.draws || ''}</div>
-                <div className="losses" style={{width: lossesWidth + '%'}}>{summary.losses || ''}</div>
+            <div className="row">
+                <div className="topic">Results</div>
+                <div className="line-diagram">
+                    <div className="wins" style={{width: winsWidth + '%'}}>{summary.wins || ''}</div>
+                    <div className="draws" style={{width: drawsWidth + '%'}}>{summary.draws || ''}</div>
+                    <div className="losses" style={{width: lossesWidth + '%'}}>{summary.losses || ''}</div>
+                </div>
             </div>
-            <div className="topic">Full-time results home:</div>
-            <div className="line-diagram">
-                <div className="wins" style={{width: winsHomeWidth + '%'}}>{summary.winsHome || ''}</div>
-                <div className="draws" style={{width: drawsHomeWidth + '%'}}>{summary.drawsHome || ''}</div>
-                <div className="losses" style={{width: lossesHomeWidth + '%'}}>{summary.lossesHome || ''}</div>
+            <div className="row">
+                <div className="topic">Home</div>
+                <div className="line-diagram">
+                    <div className="wins" style={{width: winsHomeWidth + '%'}}>{summary.winsHome || ''}</div>
+                    <div className="draws" style={{width: drawsHomeWidth + '%'}}>{summary.drawsHome || ''}</div>
+                    <div className="losses" style={{width: lossesHomeWidth + '%'}}>{summary.lossesHome || ''}</div>
+                </div>
             </div>
-            <div className="topic">Full-time results away:</div>
-            <div className="line-diagram">
-                <div className="wins" style={{width: winsAwayWidth + '%'}}>{summary.winsAway || ''}</div>
-                <div className="draws" style={{width: drawsAwayWidth + '%'}}>{summary.drawsAway || ''}</div>
-                <div className="losses" style={{width: lossesAwayWidth + '%'}}>{summary.lossesAway || ''}</div>
-            </div>
-            <br/>
-            <div className="topic">Goals total:</div>
-            <div className="line-diagram">
-                <div className="wins" style={{width: goalsScoredWidth + '%'}}>{summary.goalsTotal || ''}</div>
-                <div className="losses" style={{width: goalsAllowedWidth + '%'}}>{summary.goalsTotalAllowed || ''}</div>
-            </div>
-            <div className="topic">Goals home:</div>
-            <div className="line-diagram">
-                <div className="wins" style={{width: goalsScoredHomeWidth + '%'}}>{summary.goalsHome || ''}</div>
-                <div className="losses" style={{width: goalsAllowedHomeWidth + '%'}}>{summary.goalsHomeAllowed || ''}</div>
-            </div>
-            <div className="topic">Goals away:</div>
-            <div className="line-diagram">
-                <div className="wins" style={{width: goalsScoredAwayWidth + '%'}}>{summary.goalsAway || ''}</div>
-                <div className="losses" style={{width: goalsAllowedAwayWidth + '%'}}>{summary.goalsAwayAllowed || ''}</div>
+            <div className="row">
+                <div className="topic">Away</div>
+                <div className="line-diagram">
+                    <div className="wins" style={{width: winsAwayWidth + '%'}}>{summary.winsAway || ''}</div>
+                    <div className="draws" style={{width: drawsAwayWidth + '%'}}>{summary.drawsAway || ''}</div>
+                    <div className="losses" style={{width: lossesAwayWidth + '%'}}>{summary.lossesAway || ''}</div>
+                </div>
             </div>
             <br/>
-            <div className="topic">Shots:</div>
-            <div className="line-diagram">
-                <div className="wins" style={{width: shotsWidth + '%'}}>{summary.shots || ''}</div>
-                <div className="losses" style={{width: shotsAllowedWidth + '%'}}>{summary.shotsAllowed || ''}</div>
+            <div className="row">
+                <div className="topic">Goals total</div>
+                <div className="line-diagram">
+                    <div className="wins" style={{width: goalsScoredWidth + '%'}}>{summary.goalsTotal || ''}</div>
+                    <div className="losses" style={{width: goalsAllowedWidth + '%'}}>{summary.goalsTotalAllowed || ''}</div>
+                </div>
             </div>
-            <div className="topic">Shots on target:</div>
-            <div className="line-diagram-splitted">
-                <div className="goals-scored" style={{width: shotsOnTargetWidth + '%'}}>{summary.shotsOnTarget || ''}</div>
-                <div className="goals-empty" style={{width: (100 - shotsOnTargetWidth - shotsOnTargetAllowedWidth) + '%'}}>{summary.shotsOnTarget || ''}</div>
-                <div className="goals-allowed" style={{width: shotsOnTargetAllowedWidth + '%'}}>{summary.shotsOnTargetAllowed || ''}</div>
+            <div className="row">
+                <div className="topic">Goals home</div>
+                <div className="line-diagram">
+                    <div className="wins" style={{width: goalsScoredHomeWidth + '%'}}>{summary.goalsHome || ''}</div>
+                    <div className="losses" style={{width: goalsAllowedHomeWidth + '%'}}>{summary.goalsHomeAllowed || ''}</div>
+                </div>
+            </div>
+            <div className="row">
+                <div className="topic">Goals away</div>
+                <div className="line-diagram">
+                    <div className="wins" style={{width: goalsScoredAwayWidth + '%'}}>{summary.goalsAway || ''}</div>
+                    <div className="losses" style={{width: goalsAllowedAwayWidth + '%'}}>{summary.goalsAwayAllowed || ''}</div>
+                </div>
             </div>
             <br/>
-            <div className="topic">Corners:</div>
-            <div className="line-diagram">
-                <div className="wins" style={{width: cornersWidth + '%'}}>{summary.corners || ''}</div>
-                <div className="losses" style={{width: cornersAllowedWidth + '%'}}>{summary.cornersAllowed || ''}</div>
+            <div className="row">
+                <div className="topic">Shots</div>
+                <div className="line-diagram">
+                    <div className="wins" style={{width: shotsWidth + '%'}}>{summary.shots || ''}</div>
+                    <div className="losses" style={{width: shotsAllowedWidth + '%'}}>{summary.shotsAllowed || ''}</div>
+                </div>
             </div>
-            <div className="topic">Fouls:</div>
-            <div className="line-diagram">
-                <div className="wins" style={{width: foulsWidth + '%'}}>{summary.fouls || ''}</div>
-                <div className="losses" style={{width: foulsAllowedWidth + '%'}}>{summary.foulsAllowed || ''}</div>
+            <div className="row">
+                <div className="topic">On target</div>
+                <div className="line-diagram-splitted">
+                    <div className="goals-scored" style={{width: shotsOnTargetWidth + '%'}}>{summary.shotsOnTarget || ''}</div>
+                    <div className="goals-empty" style={{width: (100 - shotsOnTargetWidth - shotsOnTargetAllowedWidth) + '%'}}>{summary.shotsOnTarget || ''}</div>
+                    <div className="goals-allowed" style={{width: shotsOnTargetAllowedWidth + '%'}}>{summary.shotsOnTargetAllowed || ''}</div>
+                </div>
             </div>
-            <div className="topic">Yellow cards:</div>
-            <div className="line-diagram">
-                <div className="wins" style={{width: yellowCardsWidth + '%'}}>{summary.yellowCards || ''}</div>
-                <div className="losses" style={{width: yellowCardsAllowedWidth + '%'}}>{summary.yellowCardsAllowed || ''}</div>
+            <br/>
+            <div className="row">
+                <div className="topic">Corners</div>
+                <div className="line-diagram">
+                    <div className="wins" style={{width: cornersWidth + '%'}}>{summary.corners || ''}</div>
+                    <div className="losses" style={{width: cornersAllowedWidth + '%'}}>{summary.cornersAllowed || ''}</div>
+                </div>
             </div>
-            <div className="topic">Red cards:</div>
-            <div className="line-diagram">
-                <div className="wins" style={{width: redCardsWidth + '%'}}>{summary.redCards || ''}</div>
-                <div className="losses" style={{width: redCardsAllowedWidth + '%'}}>{summary.redCardsAllowed || ''}</div>
+            <div className="row">
+                <div className="topic">Fouls</div>
+                <div className="line-diagram">
+                    <div className="wins" style={{width: foulsWidth + '%'}}>{summary.fouls || ''}</div>
+                    <div className="losses" style={{width: foulsAllowedWidth + '%'}}>{summary.foulsAllowed || ''}</div>
+                </div>
+            </div>
+            <div className="row">
+                <div className="topic">Yellow cards</div>
+                <div className="line-diagram">
+                    <div className="wins" style={{width: yellowCardsWidth + '%'}}>{summary.yellowCards || ''}</div>
+                    <div className="losses" style={{width: yellowCardsAllowedWidth + '%'}}>{summary.yellowCardsAllowed || ''}</div>
+                </div>
+            </div>
+            <div className="row">
+                <div className="topic">Red cards</div>
+                <div className="line-diagram">
+                    <div className="wins" style={{width: redCardsWidth + '%'}}>{summary.redCards || ''}</div>
+                    <div className="losses" style={{width: redCardsAllowedWidth + '%'}}>{summary.redCardsAllowed || ''}</div>
+                </div>
             </div>
         </div>
     );
