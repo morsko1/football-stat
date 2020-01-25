@@ -20,7 +20,7 @@
             text-align: center;
             color: $color-font;
             font-size: 1.2em;
-            padding: 1em;
+            padding: 0.5em;
         }
     }
     .date {
@@ -46,10 +46,31 @@
         width: 35%;
         text-align: center;
     }
-    .teams .middle,
-    .result .middle,
-    .result-half .middle {
-        width: 30%;
+    .teams .logo-img {
+        width: 36px;
+        height: 36px;
+    }
+    .result {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        padding-top: 0.6em;
+        padding-bottom: 0.6em;
+    }
+    .team-home-goals {
+        height: 36px;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        background-color: $color-background-main;
+        color: $color-white;
+        border-right: 1px solid $color-white;
+    }
+    .team-away-goals {
+        height: 36px;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        background-color: $color-background-main;
+        color: $color-white;
     }
     .result-half {
         font-size: 1em;

@@ -15,36 +15,49 @@ const GameView = props => {
                     <div className="game-detail">
                         <div className="info">
                             <div>{util.getLeagueNameById(props.currentState.league)} {util.getSeasonBySeasonId(props.currentState.season)}</div>
-                            {props.currentState.team && <div>{props.currentState.team}</div>}
                         </div>
                         <div className="date">{props.game.date}</div>
                         <div className="teams">
                             <div className="team">
+                                <div className="logo">
+                                    <img
+                                        className="logo-img"
+                                        src={`/assets/${props.currentState.league}/${props.game.homeTeam}.png`}
+                                        alt=""
+                                        onError={(e)=>{e.target.onerror = null;e.target.style.display='none'}}
+                                    />
+                                </div>
                                 <Link
                                     className="link"
-                                    to={`/games/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}?team=${props.game.homeTeam}`}
+                                    to={`/team/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}/${props.game.homeTeam}`}
                                 >
                                     {props.game.homeTeam}
                                 </Link>
                             </div>
-                            <div className="middle"></div>
+                            <div className="middle result">
+                                <div className="team-home-goals">{props.game.fullTimeHomeTeamGoals}</div>
+                                <div className="team-away-goals">{props.game.fullTimeAwayTeamGoals}</div>
+                            </div>
                             <div className="team">
+                                <div className="logo">
+                                    <img
+                                        className="logo-img" 
+                                        src={`/assets/${props.currentState.league}/${props.game.awayTeam}.png`}
+                                        alt=""
+                                        onError={(e)=>{e.target.onerror = null;e.target.style.display='none'}}
+                                    />
+                                </div>
                                 <Link
                                     className="link"
-                                    to={`/games/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}?team=${props.game.awayTeam}`}
+                                    to={`/team/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}/${props.game.awayTeam}`}
                                 >
                                     {props.game.awayTeam}
                                 </Link>
                             </div>
                         </div>
-                        <div className="result">
-                            <div className="team">{props.game.fullTimeHomeTeamGoals}</div>
-                            <div className="middle"></div>
-                            <div className="team">{props.game.fullTimeAwayTeamGoals}</div>
-                        </div>
                         <div className="result-half">
                             <div className="team">({props.game.halfTimeHomeTeamGoals})</div>
-                            <div className="middle"></div>
+                            <div className="middle">half time</div>
                             <div className="team">({props.game.halfTimeAwayTeamGoals})</div>
                         </div>
                         <div className="stat">
