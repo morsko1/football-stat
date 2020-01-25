@@ -6,7 +6,7 @@ const initialState = {
     gamesLoadingError: null, 
     games: [],
     summary: null,
-    sortBy: 'asc'
+    sortBy: 'desc'
 };
 
 export default (state = initialState, action) => {
@@ -15,13 +15,14 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 isGamesLoading: true,
-                sortBy: 'asc'
+                sortBy: 'desc'
             };
 
         case actionsTeam.GET_GAMES_SUCCESS:
+            let games = action.payload.games && action.payload.games.slice().reverse();
             return {
                 ...state,
-                games: action.payload.games,
+                games: games || [],
                 summary: action.payload.summary,
                 isGamesLoading: false
             };

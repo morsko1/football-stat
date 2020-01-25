@@ -15,42 +15,86 @@
         text-align: center;
         color: $color-font;
         font-size: 1.2em;
-        padding: 1em;
+        padding: 0.5em;
     }
     .sort {
         display: flex;
         justify-content: center;
     }
     .games-list {
-        max-width: 500px;
+        max-width: 600px;
         margin-left: auto;
         margin-right: auto;
+        font-size: 1.1em;
     }
     .game-item {
-        padding: 0.5em;
+        padding:0.8em;
         border-bottom: 1px solid $color-lighter-grey;
         text-align: center;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    .game-result {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0px;
+        top: 20px;
     }
     .date {
         font-size: 0.8em;
         text-align: center;
         color: $color-font;
+        padding-top: 4px;
     }
     .link {
         color: $color-font;
         font-weight: bold;
         text-decoration: none;
     }
-    .teams, .result {
+    .link-home {
+        padding-right: 0.2em;
+    }
+    .link-away {
+        padding-left: 0.2em;
+    }
+    .teams {
         display: flex;
         justify-content: space-between;
+        flex: 1;
         color: $color-font;
         font-weight: bold;
-        padding: 0.2em;
     }
-    .teams div, .result div {
+    .team-home {
         width: 50%;
-        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .team-away {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .team-home-goals {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        background-color: $color-background-main;
+        color: $color-white;
+        border-right: 1px solid $color-white;
+        margin-left: 0.2em;
+    }
+    .team-away-goals {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        background-color: $color-background-main;
+        color: $color-white;
+        margin-right: 0.2em;
+    }
+    .teams .logo-img {
+        width: 24px;
+        height: 24px;
     }
     .more {
         text-decoration: none;

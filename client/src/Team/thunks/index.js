@@ -16,6 +16,7 @@ export const init = (params) => (dispatch, getState) => {
     // if (!games.length) {
     //     dispatch(getGames(params));
     // }
+    dispatch(actionsTeam.changeActiveTab('games'));
     dispatch(getGames(params));
 };
 

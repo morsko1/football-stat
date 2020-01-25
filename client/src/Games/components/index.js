@@ -27,24 +27,27 @@ const GamesView = props => {
                                     <div key={item.id} className="game-item">
                                         <div className="date">{item.date}</div>
                                         <div className="teams">
-                                            <div>
+                                            <div className="team-home">
                                                 <Link
-                                                    className="link"
+                                                    className="link link-home"
                                                     to={`/team/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}/${item.homeTeam}`}
                                                 >
                                                     {item.homeTeam}
                                                 </Link>
+                                                <img className="logo-img" src={`/assets/${props.currentState.league}/${item.homeTeam}.png`} alt="" onError={(e)=>{e.target.onerror = null;e.target.style.display='none'}}></img>
+                                                <div className="team-home-goals">{item.fullTimeHomeTeamGoals}</div>
                                             </div>
-                                            <div>
+                                            <div className="team-away">
+                                                <div className="team-away-goals">{item.fullTimeAwayTeamGoals}</div>
+                                                <img className="logo-img" src={`/assets/${props.currentState.league}/${item.awayTeam}.png`} alt="" onError={(e)=>{e.target.onerror = null;e.target.style.display='none'}}></img>
                                                 <Link
-                                                    className="link"
+                                                    className="link link-away"
                                                     to={`/team/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}/${item.awayTeam}`}
                                                 >
                                                     {item.awayTeam}
                                                 </Link>
                                             </div>
                                         </div>
-                                        <div className="result"><div>{item.fullTimeHomeTeamGoals}</div><div>{item.fullTimeAwayTeamGoals}</div></div>
                                         <Link to={`/game/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}/${item.id}`} className="more">More...</Link>
                                     </div>
                                 );
