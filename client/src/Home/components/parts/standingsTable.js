@@ -28,13 +28,20 @@ const StandingsTableView = props => {
                     return (
                         <tr key={i}>
                             <td className="right">{i + 1}</td>
-                            <td className="left">
-                                <Link
-                                    className="link"
-                                    to={`/team/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}/${row.name}`}
-                                >
-                                    {row.name}
-                                </Link>
+                            <td className="club-td">
+                                <div className="club">
+                                    <div className="logo">
+                                        <img className="logo-img" src={`./assets/${props.currentState.league}/${row.name}.png`} alt=""></img>
+                                    </div>
+                                    <div className="club-name">
+                                        <Link
+                                            className="link"
+                                            to={`/team/${props.currentState.season}/${props.currentState.country}/${props.currentState.league}/${row.name}`}
+                                        >
+                                            {row.name}
+                                        </Link>
+                                    </div>
+                                </div>
                             </td>
                             <td>{row.games}</td>
                             <td>{row.wins}</td>

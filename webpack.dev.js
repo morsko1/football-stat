@@ -73,6 +73,8 @@ module.exports = {
         new HtmlWebpackHarddiskPlugin(),
         new CopyWebpackPlugin([{
             from: './client/public/logo.png'
+        }, {
+            from: './client/src/assets', to: 'assets'
         }])
     ]
 };

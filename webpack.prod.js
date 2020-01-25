@@ -62,6 +62,8 @@ module.exports = {
         new MinifyPlugin(),
         new CopyWebpackPlugin([{
             from: './client/public/logo.png'
+        }, {
+            from: './client/src/assets', to: 'assets'
         }])
     ]
 };

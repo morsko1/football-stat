@@ -15,6 +15,25 @@
         padding: 0.3em 0.6em;
         text-align: center;
     }
+    .club-td {
+        padding: 0;
+    }
+    .club {
+        display: flex;
+    }
+    .club-name {
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0.3em 0.6em;
+    }
+    .logo {
+        height: 28px;
+        padding: 0;
+    }
+    .logo-img {
+        max-width: 100%;
+        max-height: 100%;
+    }
     .left {
         text-align: left;
     }
