@@ -10,7 +10,7 @@ const HomeView = props => {
             <div className="standings">
                 <div className="title">Standings</div>
                 {
-                    props.availableOptions.countries.length ?
+                    !props.isStandingsLoading && props.availableOptions.countries.length ?
                         <div className="controls">
                             <div className="controls__country">
                             country: 

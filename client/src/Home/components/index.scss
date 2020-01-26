@@ -2,6 +2,10 @@
 
 .standings {
     width: 100%;
+    .standings__table-container {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
     .title {
         @include title();
     }

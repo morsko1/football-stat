@@ -27,6 +27,7 @@
         padding: 0.3em 0.6em;
     }
     .logo {
+        width: 28px;
         height: 28px;
         padding: 0;
     }
@@ -69,5 +70,55 @@
         .lose {
             background-color: $color-lose;
         }
+    }
+
+    @media only screen and (max-width: 480px) {
+        font-size: 0.8em;
+        th {
+            padding: 0.2em 0.2em;
+        }
+        tbody td {
+            padding: 0.2em 0.2em;
+        }
+        .club-name {
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 0.2em 0.2em;
+        }
+
+        td:first-child, th:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 1;
+            background-color: white;
+          // box-shadow: 1px 0 $color-white;
+        }
+        td:nth-child(2),th:nth-child(2) {
+            position:sticky;
+            left: 30.5px;
+            z-index: 1;
+            background-color: white;
+            // box-shadow: 1px 0 $color-white;
+        }
+        th:first-child {
+            background-color: $color-lighter-grey;
+        }
+        td:first-child {
+            background-color: $color-white;
+        }
+        th:nth-child(2) {
+            background-color: $color-lighter-grey;
+        }
+        td:nth-child(2) {
+            background-color: $color-white;
+        }
+
+        .form {
+            div {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
     }
 }
