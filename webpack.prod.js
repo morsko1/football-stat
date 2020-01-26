@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 const outputDirectory = 'client/build/';
 
@@ -64,6 +65,7 @@ module.exports = {
             from: './client/public/logo.png'
         }, {
             from: './client/src/assets', to: 'assets'
-        }])
+        }]),
+        new ImageminPlugin({test: /\.(jpe?g|png|gif|svg)$/i})
     ]
 };
