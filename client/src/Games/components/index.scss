@@ -26,6 +26,7 @@
         margin-left: auto;
         margin-right: auto;
         font-size: 1.1em;
+        padding-top: 1em;
     }
     .game-item {
         padding:0.8em;
@@ -34,14 +35,6 @@
         display: flex;
         justify-content: space-between;
         position: relative;
-    }
-    .game-result {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        position: absolute;
-        left: 0px;
-        top: 20px;
     }
     .date {
         font-size: 0.8em;
@@ -82,8 +75,10 @@
         padding-right: 0.5em;
         background-color: $color-background-main;
         color: $color-white;
-        border-right: 1px solid $color-white;
         margin-left: 0.2em;
+        margin-right: 1px;
+        height: 24px;
+        line-height: 24px;
     }
     .team-away-goals {
         padding-left: 0.5em;
@@ -91,6 +86,8 @@
         background-color: $color-background-main;
         color: $color-white;
         margin-right: 0.2em;
+        height: 24px;
+        line-height: 24px;
     }
     .teams .logo-img {
         width: 24px;
@@ -99,5 +96,27 @@
     .more {
         text-decoration: none;
         color: $color-font;
+    }
+
+    @media only screen and (max-width: 480px) {
+        .info {
+            width: 100%;
+        }
+        .games-list {
+            width: 100%;
+            font-size: 1em;
+        }
+        .game-item {
+            padding: 0.2em;
+            flex-wrap: wrap;
+        }
+        .date {
+            flex-basis: 100%;
+            padding: 0.4em;
+        }
+        .more {
+            flex-basis: 100%;
+            padding: 0.4em;
+        }
     }
 }

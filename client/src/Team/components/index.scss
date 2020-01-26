@@ -52,6 +52,7 @@
         margin-left: auto;
         margin-right: auto;
         font-size: 1.1em;
+        padding-top: 1em;
     }
     .game-item {
         padding: 0.8em;
@@ -117,8 +118,10 @@
         padding-right: 0.5em;
         background-color: $color-background-main;
         color: $color-white;
-        border-right: 1px solid $color-white;
+        margin-right: 1px;
         margin-left: 0.2em;
+        height: 24px;
+        line-height: 24px;
     }
     .team-away-goals {
         padding-left: 0.5em;
@@ -126,6 +129,8 @@
         background-color: $color-background-main;
         color: $color-white;
         margin-right: 0.2em;
+        height: 24px;
+        line-height: 24px;
     }
     .teams .logo-img {
         width: 24px;
@@ -141,6 +146,7 @@
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+        padding-top: 1em;
         .row {
             position: relative;
         }
@@ -201,6 +207,35 @@
             padding-top: 0.2em;
             padding-bottom: 0.2em;
             border-bottom: 10px solid rgba($color-draw, 0.8);
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .games-list {
+            font-size: 1em;
+        }
+        .game-item {
+            padding: 0.2em;
+            flex-wrap: wrap;
+        }
+        .date {
+            flex-basis: 100%;
+            padding: 0.4em;
+        }
+        .more {
+            flex-basis: 100%;
+            padding: 0.4em;
+        }
+        .summary {
+            .topic {
+                position: static;
+                left: 0;
+                text-align: left;
+                padding-left: 0;
+                padding-top: 0;
+                padding-right: 0;
+                width: 100%;
+            }
         }
     }
 }

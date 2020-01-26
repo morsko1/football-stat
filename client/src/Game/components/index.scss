@@ -59,14 +59,16 @@
     }
     .team-home-goals {
         height: 36px;
+        line-height: 36px;
         padding-left: 0.5em;
         padding-right: 0.5em;
         background-color: $color-background-main;
         color: $color-white;
-        border-right: 1px solid $color-white;
+        margin-right: 1px;
     }
     .team-away-goals {
         height: 36px;
+        line-height: 36px;
         padding-left: 0.5em;
         padding-right: 0.5em;
         background-color: $color-background-main;
