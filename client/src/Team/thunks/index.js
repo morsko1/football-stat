@@ -17,7 +17,12 @@ export const init = (params) => (dispatch, getState) => {
     //     dispatch(getGames(params));
     // }
     dispatch(actionsTeam.changeActiveTab('games'));
-    dispatch(getGames(params));
+
+    const team = decodeURI(params.team);
+    const gamesId = currentState.season + '-' + currentState.country.toLowerCase() + '-' + team.toLowerCase();
+    if (state.team.id !== gamesId) {
+        dispatch(getGames(params));
+    }
 };
 
 export const getGames = (params) => (dispatch, getState) => {
@@ -33,11 +38,12 @@ export const getGames = (params) => (dispatch, getState) => {
     } else {
         return;
     }
+    const gamesId = currentState.season + '-' + currentState.country.toLowerCase() + '-' + team.toLowerCase();
     fetch(`${baseUrl}/api/v1/seasons/${currentState.season}/countries/${currentState.country}/leagues/${currentState.league}/teams/${team}/games`).then(
         response => response.json()
     ).then(data =>{
         console.log(data);
-        dispatch(actionsTeam.getGamesSuccess(data.data));
+        dispatch(actionsTeam.getGamesSuccess(data.data, gamesId));
     }).catch(error => {
         console.log(error);
         dispatch(actionsTeam.getGamesFailure(error));

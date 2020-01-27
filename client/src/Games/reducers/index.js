@@ -1,6 +1,7 @@
 import * as actionsGames from '../actions';
 
 const initialState = {
+    id: null,
     isGamesLoading: false,
     gamesLoadingError: null, 
     games: [],
@@ -18,6 +19,7 @@ export default (state = initialState, action) => {
         case actionsGames.GET_GAMES_SUCCESS:
             return {
                 ...state,
+                id: action.payload.id,
                 games: action.payload.data.slice().reverse(),
                 isGamesLoading: false
             };
@@ -25,6 +27,7 @@ export default (state = initialState, action) => {
         case actionsGames.GET_GAMES_FAILURE:
             return {
                 ...state,
+                id: null,
                 isGamesLoading: false,
                 gamesLoadingError: action.payload.error
             };

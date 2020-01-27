@@ -8,11 +8,12 @@ export const getGames = () => ({
     type: GET_GAMES
 });
 
-export const getGamesSuccess = (data) => ({
+export const getGamesSuccess = (data, id) => ({
     type: GET_GAMES_SUCCESS,
     payload: {
         games: data.games,
-        summary: data.summary
+        summary: data.summary,
+        id: id
     }
 });
 

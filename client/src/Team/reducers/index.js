@@ -1,6 +1,7 @@
 import * as actionsTeam from '../actions';
 
 const initialState = {
+    id: null,
     activeTab: 'games',
     isGamesLoading: false,
     gamesLoadingError: null, 
@@ -22,6 +23,7 @@ export default (state = initialState, action) => {
             let games = action.payload.games && action.payload.games.slice().reverse();
             return {
                 ...state,
+                id: action.payload.id,
                 games: games || [],
                 summary: action.payload.summary,
                 isGamesLoading: false
@@ -30,6 +32,7 @@ export default (state = initialState, action) => {
         case actionsTeam.GET_GAMES_FAILURE:
             return {
                 ...state,
+                id: null,
                 isGamesLoading: false,
                 gamesLoadingError: action.payload.error
             };

@@ -7,10 +7,11 @@ export const getGames = () => ({
     type: GET_GAMES
 });
 
-export const getGamesSuccess = (data) => ({
+export const getGamesSuccess = (data, id) => ({
     type: GET_GAMES_SUCCESS,
     payload: {
-        data
+        data,
+        id
     }
 });
 
