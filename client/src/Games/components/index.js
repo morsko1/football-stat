@@ -4,6 +4,19 @@ import { Link } from 'react-router-dom';
 import Layout from '~/common/components/Layout/Layout.js';
 import * as util from '~/common/util';
 
+const getSortElement = props => {
+    return (
+        <div className="sort">
+            <div className="sort-inner" onClick={props.sort}>
+                <span className="sort-icon">
+                    {props.sortBy === 'asc' ? '\u25B2' : '\u25BC'}
+                </span>
+                <span className="sort-text">{props.sortBy === 'asc' ? 'new first' : 'old first'}</span>
+            </div>
+        </div>
+    );
+};
+
 const GamesView = props => {
     return (
         <Layout>
@@ -15,11 +28,8 @@ const GamesView = props => {
                     <div>
                     <div className="info">
                         <div>{util.getLeagueNameById(props.currentState.league)} {util.getSeasonBySeasonId(props.currentState.season)}</div>
-                        {props.currentState.team && <div>{props.currentState.team}</div>}
                     </div>
-                    <div className="sort">
-                        <button onClick={props.sort}>{props.sortBy === 'asc' ? 'new first' : 'old first'}</button>
-                    </div>
+                    {getSortElement(props)}
                     <div className="games-list">
                         {
                             props.games.map((item) => {

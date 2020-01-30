@@ -201,23 +201,32 @@ const getSummary = (props) => {
     );
 }
 
+const getSortElement = props => {
+    return (
+        <div className="sort">
+            <div className="sort-inner" onClick={props.sort}>
+                <span className="sort-icon">
+                    {props.sortBy === 'asc' ? '\u25B2' : '\u25BC'}
+                </span>
+                <span className="sort-text">{props.sortBy === 'asc' ? 'new first' : 'old first'}</span>
+            </div>
+        </div>
+    );
+};
+
 const TeamView = props => {
     const getTabContent = () => {
         switch(props.activeTab) {
             case 'games':
                 return (<div>
-                    <div className="sort">
-                        <button onClick={props.sort}>{props.sortBy === 'asc' ? 'new first' : 'old first'}</button>
-                    </div>
+                    {getSortElement(props)}
                     {getGamesList(props)}
                 </div>);
             case 'summary':
                 return getSummary(props);
             default:
                 return (<div>
-                    <div className="sort">
-                        <button onClick={props.sort}>{props.sortBy === 'asc' ? 'new first' : 'old first'}</button>
-                    </div>
+                    {getSortElement(props)}
                     {getGamesList(props)}
                 </div>);
         }
@@ -225,7 +234,7 @@ const TeamView = props => {
     return (
         <Layout>
             <div className="team">
-                <div className="title">{props.summary && props.summary.name || 'Team'}</div>
+                <div className="title">Team</div>
                 <div>
                 {
                     !props.isGamesLoading ?
@@ -247,13 +256,13 @@ const TeamView = props => {
                             className={`tab ${props.activeTab === 'games' ? 'active' : ''}`}
                             onClick={() => props.changeActiveTab('games')}
                         >
-                            games
+                            Games
                         </div>
                         <div
                             className={`tab ${props.activeTab === 'summary' ? 'active' : ''}`}
                             onClick={() => props.changeActiveTab('summary')}
                         >
-                            summary
+                            Summary
                         </div>
                     </div>
                     {

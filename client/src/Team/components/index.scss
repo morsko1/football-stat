@@ -47,6 +47,16 @@
         justify-content: center;
         margin-top: 1em;;
     }
+    .sort-inner {
+        display: inline-block;
+        cursor: pointer;
+        padding: 0.5em;
+        color: $color-white;
+        background-color: $color-background-main;
+    }
+    .sort-text {
+        margin-left: 0.5em;
+    }
     .games-list {
         max-width: 600px;
         margin-left: auto;
@@ -84,6 +94,7 @@
         text-align: center;
         color: $color-font;
         padding-top: 4px;
+        flex: 0.2;
     }
     .link {
         color: $color-font;
@@ -139,6 +150,7 @@
     .more {
         text-decoration: none;
         color: $color-font;
+        flex: 0.2;
     }
 
     .summary {
@@ -231,7 +243,7 @@
                 position: static;
                 left: 0;
                 text-align: left;
-                padding-left: 0;
+                padding-left: 0.5em;
                 padding-top: 0;
                 padding-right: 0;
                 width: 100%;
