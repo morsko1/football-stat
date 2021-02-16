@@ -6,10 +6,10 @@ const initialState = {
     standingsLoadingError: null, 
     standings: {},
     currentState: {
-        season: '1920',
+        season: '2021',
         country: 'England',
         league: 'E0',
-        standingsId: '1920-england'
+        standingsId: '2021-england'
     },
     availableOptions: {
         seasons: [],
