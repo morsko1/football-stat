@@ -29,5 +29,4 @@ jobs:
         PORT: ${{ secrets.PORT }}
         KEY: ${{ secrets.SSHKEY }}
         script: |
-          cd ~/football-stat && npm install
-          cd ~/football-stat && npm run build
+          cd ~/football-stat && npm run client:prod_u
